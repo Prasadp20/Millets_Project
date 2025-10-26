@@ -1,19 +1,27 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export default function Navbar() {
+    const navigate = useNavigate();
+
+    const handleLoginClick = () => {
+        navigate("/login"); // navigate to login page
+    };
+
     return (
         <>
             {/* Navbar */}
-            <nav className="navbar navbar-expand-lg bg-white py-3">
+            <nav className="navbar navbar-expand-lg bg-white py-3 shadow-sm">
                 <div className="container">
+                    {/* Brand Logo */}
                     <NavLink className="navbar-brand" to="/">
                         <img
                             src=""
                             alt="Millets for Health"
-                            height="100"
+                            height="80"
                         />
                     </NavLink>
+
                     <button
                         className="navbar-toggler"
                         type="button"
@@ -26,26 +34,57 @@ export default function Navbar() {
                         <span className="navbar-toggler-icon"></span>
                     </button>
 
-                    <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
-                        <ul className="navbar-nav me-6">
-                            <li className="nav-item"><NavLink className="nav-link mx-2" to="/">Home</NavLink></li>
-                            <li className="nav-item"><NavLink className="nav-link mx-2" to="/about">About Us</NavLink></li>
-                            <li className="nav-item"><NavLink className="nav-link mx-2" to="/shop">Products</NavLink></li>
-                            <li className="nav-item"><NavLink className="nav-link mx-2" to="/blogs">Blogs</NavLink></li>
-                            <li className="nav-item"><NavLink className="nav-link mx-2" to="/contactus">Contact Us</NavLink></li>
-                        </ul>
+                    {/* Navbar Items */}
+                    <div className="collapse navbar-collapse" id="navbarNav">
+                        <div className="d-flex align-items-center justify-content-end w-100 gap-4">
+                            {/* Navigation Links */}
+                            <ul className="navbar-nav d-flex align-items-center mb-0">
+                                <li className="nav-item">
+                                    <NavLink className="nav-link mx-2" to="/">Home</NavLink>
+                                </li>
+                                <li className="nav-item">
+                                    <NavLink className="nav-link mx-2" to="/about">About Us</NavLink>
+                                </li>
+                                <li className="nav-item">
+                                    <NavLink className="nav-link mx-2" to="/shop">Products</NavLink>
+                                </li>
+                                <li className="nav-item">
+                                    <NavLink className="nav-link mx-2" to="/blogs">Blogs</NavLink>
+                                </li>
+                                <li className="nav-item">
+                                    <NavLink className="nav-link mx-2" to="/contactus">Contact Us</NavLink>
+                                </li>
+                            </ul>
 
-                        <form className="d-flex mx-3" role="search">
-                            <input
-                                className="form-control me-4"
-                                type="search"
-                                placeholder="Search for products"
-                                aria-label="Search"
+                            {/* Search Box */}
+                            <form className="d-flex align-items-center" role="search" style={{ minWidth: "250px" }}>
+                                <input
+                                    className="form-control me-2"
+                                    type="search"
+                                    placeholder="Search for products"
+                                    aria-label="Search"
+                                />
+                                <button className="btn btn-outline-success" type="submit">
+                                    Search
+                                </button>
+                            </form>
+
+                            {/* User Icon */}
+                            <img
+                                src="src/assets/user2.png"
+                                alt="User Logo"
+                                style={{ width: "24px", cursor: "pointer" }}
+                                onClick={handleLoginClick}
+                                title="Go to Login"
                             />
-                            <button className="btn btn-outline-success" type="submit">
-                                Search
-                            </button>
-                        </form>
+
+                            {/* Shopping Cart Icon */}
+                            <img
+                                src="src/assets/shopping-cart.png"
+                                alt="Shopping Cart Logo"
+                                style={{ width: "24px", cursor: "pointer" }}
+                            />
+                        </div>
                     </div>
                 </div>
             </nav>

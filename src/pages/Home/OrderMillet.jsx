@@ -6,8 +6,6 @@ export default function OrderMillet() {
       className="container-fluid d-flex justify-content-center align-items-center text-center"
       style={{
         backgroundImage:
-          // "url('https://cdn.create.vista.com/api/media/medium/502061540/stock-photo-jowar-roti-jowar-bhakri-healthy-gluten-free-flatbreads-made-sorghum?token=')",
-
           "linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://images.pexels.com/photos/25858342/pexels-photo-25858342.jpeg?_gl=1*524vz3*_ga*MTExMjU0Njg2OC4xNzYxMzM5MjI2*_ga_8JE65Q40S6*czE3NjEzMzkyMjUkbzEkZzEkdDE3NjEzMzk4NzAkajU5JGwwJGgw')",
 
         backgroundSize: "cover",

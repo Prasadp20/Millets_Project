@@ -2,18 +2,20 @@ import React from "react";
 
 export default function MilletCategories() {
   const categories = [
-    { name: "Millet Pasta", color: "#fff5e6", image: "https://via.placeholder.com/100?text=Pasta" },
-    { name: "Millet Noodles", color: "#e6fff2", image: "https://via.placeholder.com/100?text=Noodles" },
-    { name: "Gift Hampers", color: "#fff5e6", image: "https://via.placeholder.com/100?text=Hampers" },
-    { name: "Millet Snacks", color: "#e6fff2", image: "https://via.placeholder.com/100?text=Snacks" },
-    { name: "Unpolished Millets", color: "#f0f7f0", image: "https://via.placeholder.com/100?text=Millets" },
-    { name: "Millet Flour", color: "#e6fff2", image: "https://via.placeholder.com/100?text=Flour" },
-    { name: "Millet Cookies", color: "#fff5e6", image: "https://via.placeholder.com/100?text=Cookies" },
-    { name: "Millet Energy Bars", color: "#e6fff2", image: "https://via.placeholder.com/100?text=Bars" },
-    { name: "Millet Cereal", color: "#f0f7f0", image: "https://via.placeholder.com/100?text=Cereal" },
-    { name: "Millet Rice", color: "#fff5e6", image: "https://via.placeholder.com/100?text=Rice" },
-    { name: "Millet Crackers", color: "#e6fff2", image: "https://via.placeholder.com/100?text=Crackers" },
-    { name: "Millet Pancakes", color: "#f0f7f0", image: "https://via.placeholder.com/100?text=Pancakes" },
+
+    // added by me
+    {name : "Cold Pressed Oil", color: "#fff5e6", image: "https://milletsforhealth.com/wp-content/uploads/2025/07/12.png"},
+    {name : "Millet Bakes", color: "#e6fff2", image: "https://milletsforhealth.com/wp-content/uploads/2025/07/1-1.png"},
+    {name : "Millet Batter", color: "rgba(255, 245, 230, 1)", image: "https://milletsforhealth.com/wp-content/uploads/2025/07/10.png"},
+    {name : "Millets Daliya", color: "#e6fff2", image: "https://milletsforhealth.com/wp-content/uploads/2025/07/2.png"},
+    {name : "Combo", color: "#f0f7f0", image: "https://milletsforhealth.com/wp-content/uploads/2025/07/7.png"},
+    {name : "Millet Pre Mixed", color: "#e6fff2", image: "https://milletsforhealth.com/wp-content/uploads/2025/07/5.png"},
+    {name : "Millet Pasta", color: "#fff5e6", image: "https://milletsforhealth.com/wp-content/uploads/2025/08/Group-9.png"},
+    {name : "Millet Noodles", color: "#e6fff2", image: "https://milletsforhealth.com/wp-content/uploads/2025/08/Group-11.png"},
+    {name : "Gift Hampers", color: "#f0f7f0", image: "https://milletsforhealth.com/wp-content/uploads/2025/08/Group-12.png"},
+    {name : "Millet Snacks", color: "#fff5e6", image: "https://milletsforhealth.com/wp-content/uploads/2025/07/6.png"},
+    {name : "Unpolished Millets", color: "#e6fff2", image: "https://milletsforhealth.com/wp-content/uploads/2025/07/9.png"},
+    {name : "Millet Flours", color: "#f0f7f0", image: "https://milletsforhealth.com/wp-content/uploads/2025/07/3.png"},
   ];
 
   // Group categories into chunks of 6

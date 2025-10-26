@@ -7,6 +7,9 @@ import Home from "./pages/Home/Home";
 import Blogs from "./pages/Blogs/Blogs";
 import Shop from "./pages/Products/Products";
 import ContactUs from "./pages/ContactUs/ContactUs";
+import Login from "./pages/Login/Login";
+import Signup from "./pages/Registration/SignUp";
+import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 
 // Example of lazy loading (optional)
 const LazyAbout = lazy(() => import("./pages/AboutUs/About"));
@@ -44,6 +47,10 @@ export default function App() {
 
             {/* 404 fallback */}
             {/* <Route path="*" element={<NotFound />} /> */}
+
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup/>} />
+            <Route path="/forgotpassword" element={<ForgotPassword/>} />
           </Routes>
         </Suspense>
       </div>
