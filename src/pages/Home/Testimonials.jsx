@@ -44,12 +44,11 @@ export default function TestimonialCarousel() {
     <div
       className="container-fluid text-center py-5 position-relative"
       style={{
-        backgroundImage:
-        //   "url('https://images.unsplash.com/photo-1604328698692-f76ea9498e76?auto=format&fit=crop&w=1600&q=80')",
+        backgroundImage:      
           "url('https://plus.unsplash.com/premium_photo-1726729279950-224b83ae7a75?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070')",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        color: "white",
+        color: "white"
       }}
     >
       {/* 🔹 Added dark overlay */}

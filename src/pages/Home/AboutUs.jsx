@@ -7,7 +7,7 @@ export default function AboutUsSection() {
                 <div className="row align-items-center mb-5">
                     {/* --- Left Text Content --- */}
                     <div className="col-lg-7">
-                        <p className="text-uppercase text-success fw-bold mb-2">
+                        <p className="text-uppercase text-warning fw-bold mb-2">
                             About Us
                         </p>
                         <h1 className="fw-bold mb-4 lh-sm">

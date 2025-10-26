@@ -15,7 +15,7 @@ export default function FreshProduct_Discount() {
             backgroundPosition: "center",
           }}
         >
-          <p className="text-light mb-1 p-2">Fresh Product</p>
+          <p className="text-warning mb-1 p-2">Fresh Product</p>
           <h2 className="fw-semibold p-2">Wholesome Freshness Every Day</h2>
           <p><a href="#" className="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover p-2">Explore All</a></p>
 
@@ -31,7 +31,7 @@ export default function FreshProduct_Discount() {
             backgroundPosition: "center",
           }}
         >
-          <p className="text-white mb-1 p-2">Discount</p>
+          <p className="text-warning mb-1 p-2">Discount</p>
           <h2 className="fw-semibold p-2">Limited-Time Healthful Saving</h2>
           <p><a href="#" className="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover p-2">Explore All</a></p>
         </div>

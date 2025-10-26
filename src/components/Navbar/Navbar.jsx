@@ -1,40 +1,41 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
     return (
         <>
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Navbar</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Dropdown
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><hr class="dropdown-divider"/></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                            </li>
+            {/* Navbar */}
+            <nav className="navbar navbar-expand-lg bg-white py-3">
+                <div className="container">
+                    <NavLink className="navbar-brand" to="/">
+                        <img
+                            src=""
+                            alt="Millets for Health"
+                            // height="80"
+                            width= "100"
+
+                        />
+                    </NavLink>
+
+                    <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul className="navbar-nav me-6">
+                            <li className="nav-item"><NavLink className="nav-link mx-2" to="/">Home</NavLink></li>
+                            <li className="nav-item"><NavLink className="nav-link mx-2" to="/about">About Us</NavLink></li>
+                            <li className="nav-item"><NavLink className="nav-link mx-2" to="/shop">Products</NavLink></li>
+                            <li className="nav-item"><NavLink className="nav-link mx-2" to="/blogs">Blogs</NavLink></li>
+                            <li className="nav-item"><NavLink className="nav-link mx-2" to="/contactus">Contact Us</NavLink></li>
                         </ul>
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                            <button class="btn btn-outline-success" type="submit">Search</button>
+
+                        <form className="d-flex mx-3" role="search">
+                            <input
+                                className="form-control me-4"
+                                type="search"
+                                placeholder="Search for products"
+                                aria-label="Search"
+                            />
+                            <button className="btn btn-outline-success" type="submit">
+                                Search
+                            </button>
                         </form>
                     </div>
                 </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -18,11 +19,31 @@ export default function Footer() {
           <div className="col-md-2 mb-4">
             <h6 className="fw-bold mb-3 text-success">Quick Links</h6>
             <ul className="list-unstyled">
-              <li><a href="/" className="text-light text-decoration-none small">Home</a></li>
-              <li><a href="/about" className="text-light text-decoration-none small">About Us</a></li>
-              <li><a href="/products" className="text-light text-decoration-none small">Products</a></li>
-              <li><a href="/blog" className="text-light text-decoration-none small">Blog</a></li>
-              <li><a href="/contact" className="text-light text-decoration-none small">Contact</a></li>
+              <li>
+                <NavLink to="/" className="text-light text-decoration-none small">
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/about" className="text-light text-decoration-none small">
+                  About Us
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/shop" className="text-light text-decoration-none small">
+                  Products
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/blogs" className="text-light text-decoration-none small">
+                  Blogs
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/contactus" className="text-light text-decoration-none small">
+                  Contact Us
+                </NavLink>
+              </li>
             </ul>
           </div>
 
@@ -50,7 +71,7 @@ export default function Footer() {
               ✉️ support@milletsforhealth.com
             </p>
             {/* Social icons */}
-            <div>
+            {/* <div>
               <a href="#" className="btn btn-outline-success btn-sm me-2">
                 <i className="bi bi-facebook"></i>
               </a>
@@ -63,7 +84,7 @@ export default function Footer() {
               <a href="#" className="btn btn-outline-success btn-sm">
                 <i className="bi bi-whatsapp"></i>
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
 
