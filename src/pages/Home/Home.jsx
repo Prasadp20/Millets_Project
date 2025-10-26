@@ -16,17 +16,14 @@ export default function Home() {
                 className="text-white"
                 style={{
                     backgroundImage:
-                        "url('https://images.pexels.com/photos/9974505/pexels-photo-9974505.jpeg?_gl=1*nt6ygt*_ga*MTExMjU0Njg2OC4xNzYxMzM5MjI2*_ga_8JE65Q40S6*czE3NjEzMzkyMjUkbzEkZzEkdDE3NjEzMzk2NTIkajU5JGwwJGgw')",                        
+                        "linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://images.pexels.com/photos/9974505/pexels-photo-9974505.jpeg?_gl=1*nt6ygt*_ga*MTExMjU0Njg2OC4xNzYxMzM5MjI2*_ga_8JE65Q40S6*czE3NjEzMzkyMjUkbzEkZzEkdDE3NjEzMzk2NTIkajU5JGwwJGgw')",                        
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     height: "50vh",
                     position: "relative",
                 }}
             >
-                <div
-                    className="d-flex flex-column justify-content-center align-items-start h-100 ps-5"
-                    style={{ backgroundColor: "rgba(0, 0, 0, 0.4)" }}
-                >
+                <div className="container d-flex flex-column justify-content-center align-items-start h-100 ps-5">
                     <h5 className="text-warning mb-2">Natural Millet</h5>
                     <h1 className="fw-bold">Healthy Living Starts with</h1>
                     <h1 className="fw-bold mb-4">Unpolished Millets</h1>
