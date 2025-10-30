@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 export default function OrderMillet() {
   return (
@@ -26,9 +27,9 @@ export default function OrderMillet() {
         <p className="fs-5 mb-4">
           Nourish your body with the power of ancient grains — order now!
         </p>
-        <button type="button" className="btn btn-success btn-lg px-4">
+        <NavLink to="/freshmilletfood" className="btn btn-success px-4 py-2 rounded-pill fw-semibold" style={{ width: "150px" }}>
           Order Now
-        </button>
+        </NavLink>
       </div>
     </div>
   );

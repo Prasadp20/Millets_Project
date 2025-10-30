@@ -22,6 +22,7 @@ const BlogEvents = () => {
           Explore All
         </a>
       </div>
+      
       <div className="row justify-content-center">
         {/* Card 1 */}
         <div className="col-md-4 mb-4 d-flex p-3">

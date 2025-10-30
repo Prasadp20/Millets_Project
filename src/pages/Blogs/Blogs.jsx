@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import Navbar from "../../components/Navbar/Navbar";
-import Footer from "../../components/Footer/Footer";
+import { NavLink } from "react-router-dom";
 
 export default function Blogs() {
     const [filter, setFilter] = useState("All");
@@ -142,13 +141,14 @@ export default function Blogs() {
                                     </p>
                                     <p className="card-text text-muted">{blog.desc}</p>
                                     <p>
-                                        <a
-                                            href="#"
+                                        <NavLink
+                                            to="/blogDetail"
                                             className="link-success link-offset-2 link-underline-opacity-0 link-underline-opacity-0-hover fw-semibold"
                                         >
                                             CONTINUE READING
-                                        </a>
+                                        </NavLink>
                                     </p>
+
                                 </div>
                             </div>
                         </div>

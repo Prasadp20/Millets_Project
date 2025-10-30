@@ -10,6 +10,9 @@ import ContactUs from "./pages/ContactUs/ContactUs";
 import Login from "./pages/Login/Login";
 import Signup from "./pages/Registration/SignUp";
 import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
+import FreshMilletFood from "./pages/FreshMilletFood/FreshMilletFood";
+import WhatsAppCatalog from "./pages/WhatsAppCatalog/WhatsAppCatalog";
+import BlogDetail from "./pages/BlogDetail/BlogDetail";
 
 // Example of lazy loading (optional)
 const LazyAbout = lazy(() => import("./pages/AboutUs/About"));
@@ -51,6 +54,9 @@ export default function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup/>} />
             <Route path="/forgotpassword" element={<ForgotPassword/>} />
+            <Route path="/freshmilletfood" element={<FreshMilletFood/>} />
+            <Route path="/whatsappcatalog" element={<WhatsAppCatalog/>} />
+            <Route path="/blogDetail" element={<BlogDetail/>} />
           </Routes>
         </Suspense>
       </div>

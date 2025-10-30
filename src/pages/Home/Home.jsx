@@ -1,12 +1,11 @@
 import React from "react";
-import Navbar from "../../components/Navbar/Navbar";
 import MilletCategories from "./MilletCategories"; // ✅ Import the component
 import OrderMillet from "./OrderMillet";
 import FreshProduct_Discount from "./FreshProduct_Discount";
 import AboutUs from "./AboutUs";
 import TestimonialSection from "./Testimonials";
 import BlogEvents from "./BlogEvents";
-import Footer from "../../components/Footer/Footer";
+import { NavLink } from "react-router-dom";
 
 export default function Home() {
     return (
@@ -16,7 +15,7 @@ export default function Home() {
                 className="text-white"
                 style={{
                     backgroundImage:
-                        "linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://images.pexels.com/photos/9974505/pexels-photo-9974505.jpeg?_gl=1*nt6ygt*_ga*MTExMjU0Njg2OC4xNzYxMzM5MjI2*_ga_8JE65Q40S6*czE3NjEzMzkyMjUkbzEkZzEkdDE3NjEzMzk2NTIkajU5JGwwJGgw')",                        
+                        "linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://images.pexels.com/photos/9974505/pexels-photo-9974505.jpeg?_gl=1*nt6ygt*_ga*MTExMjU0Njg2OC4xNzYxMzM5MjI2*_ga_8JE65Q40S6*czE3NjEzMzkyMjUkbzEkZzEkdDE3NjEzMzk2NTIkajU5JGwwJGgw')",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     height: "50vh",
@@ -32,7 +31,15 @@ export default function Home() {
                         nutrients, and flavor – making them a healthier, wholegrain food
                         choice.
                     </p>
-                    <button className="btn btn-success btn-lg px-4">Explore All</button>
+                    {/* <button className="btn btn-success btn-lg px-4 ">Explore All</button> */}
+
+                    <NavLink
+                        to="/shop"
+                        className="btn btn-success px-4 py-2 rounded-pill fw-semibold" style={{ width: "150px" }}
+                    >
+                        Explore All
+                    </NavLink>
+
                 </div>
             </div>
 
@@ -40,18 +47,18 @@ export default function Home() {
             <MilletCategories /> {/* ✅ Calling the component here */}
 
             {/* To order freshly cooked millet food */}
-            <OrderMillet/>
+            <OrderMillet />
 
-            <FreshProduct_Discount/>
+            <FreshProduct_Discount />
 
             {/* About Us */}
-            <AboutUs/>
+            <AboutUs />
 
             {/* TestimonialSection */}
-            <TestimonialSection/>
+            <TestimonialSection />
 
             {/* Blog & Events */}
-            <BlogEvents/>
+            <BlogEvents />
         </div>
     );
 }
