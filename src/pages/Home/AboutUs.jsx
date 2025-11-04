@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 export default function AboutUsSection() {
     return (
@@ -18,12 +19,12 @@ export default function AboutUsSection() {
                             Millets for Health is born out of a journey of personal health and
                             transformation and has grown into a social enterprise working on
                             the revival of millets, the ancient Indian Super Foods.{" "}
-                            <a
-                                href="#"
+                            <NavLink
+                                to="/about"
                                 className="fw-semibold text-decoration-none text-primary"
                             >
                                 Read More
-                            </a>
+                            </NavLink>
                         </p>
 
                         {/* --- Features Grid --- */}
@@ -118,7 +119,7 @@ export default function AboutUsSection() {
                 </div>
 
                 {/* --- Statistics Section --- */}
-                <div className="row text-center pt-5 border-top mt-4">
+                {/* <div className="row text-center pt-5 border-top mt-4">
                     <div className="col-md-3 col-6 mb-4">
                         <h2 className="fw-bold text-warning mb-1">9876+</h2>
                         <p className="text-muted small mb-0">Farmers Benefited</p>
@@ -135,7 +136,7 @@ export default function AboutUsSection() {
                         <h2 className="fw-bold text-warning mb-1">9876+</h2>
                         <p className="text-muted small mb-0">Workshop Alumni</p>
                     </div>
-                </div>
+                </div> */}
             </div>
 
             {/* --- Floating WhatsApp Icon --- */}

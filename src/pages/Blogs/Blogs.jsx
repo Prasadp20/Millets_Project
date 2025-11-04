@@ -6,36 +6,42 @@ export default function Blogs() {
 
     const blogs = [
         {
+            id: 1,
             title: "Author Connect",
             image: "https://milletsforhealth.com/wp-content/uploads/2025/08/imgi_2_WhatsApp_Image_2023-02-09_at_12_43_12_PM.jpg",
             category: "Event",
             desc: "On the occasion of the International Year of Millets, #IYM2023, Publications Division brings to you our new way to engage with our authors and readers, #Authorsconnect, the first...",
         },
         {
+            id: 2,
             title: "Healthy Recipes",
             image: "https://milletsforhealth.com/wp-content/uploads/2025/08/imgi_2_WhatsApp_Image_2023-02-04_at_6_01_55_PM.jpg",
             category: "Event",
             desc: "Discover nutritious millet-based recipes that are easy to prepare and packed with health benefits for every meal of the day.",
         },
         {
+            id: 3,
             title: "A Healthy You Starts with a Healthy Gut: The Role of Millets in Gut Health",
             image: "https://milletsforhealth.com/wp-content/uploads/2025/07/145602.jpg",
             category: "Blog",
             desc: "It's an ancient truth gaining modern scientific backing: your gut is incredibly central to your overall well-being. Far from just digesting food, your gut, with its teeming community...",
         },
         {
+            id: 4,
             title: "A Healthy You Starts with a Healthy Gut: The Role of Millets in Gut Health",
             image: "https://milletsforhealth.com/wp-content/uploads/2025/07/145602.jpg",
             category: "Blog",
             desc: "It's an ancient truth gaining modern scientific backing: your gut is incredibly central to your overall well-being. Far from just digesting food, your gut, with its teeming community...",
         },
         {
+            id: 5,
             title: "A Healthy You Starts with a Healthy Gut: The Role of Millets in Gut Health",
             image: "https://milletsforhealth.com/wp-content/uploads/2025/07/145602.jpg",
             category: "Blog",
             desc: "It's an ancient truth gaining modern scientific backing: your gut is incredibly central to your overall well-being. Far from just digesting food, your gut, with its teeming community...",
         },
         {
+            id: 6,
             title: "A Healthy You Starts with a Healthy Gut: The Role of Millets in Gut Health",
             image: "https://milletsforhealth.com/wp-content/uploads/2025/07/145602.jpg",
             category: "Blog",
@@ -140,14 +146,22 @@ export default function Blogs() {
                                         Millets for Health
                                     </p>
                                     <p className="card-text text-muted">{blog.desc}</p>
-                                    <p>
-                                        <NavLink
-                                            to="/blogDetail"
-                                            className="link-success link-offset-2 link-underline-opacity-0 link-underline-opacity-0-hover fw-semibold"
-                                        >
-                                            CONTINUE READING
-                                        </NavLink>
-                                    </p>
+                                    
+                                    <NavLink
+                                        to={`/blogDetail/${index}`}
+                                        state={{
+                                            category: blog.category,
+                                            title: blog.title,
+                                            image: blog.image,
+                                            desc: blog.desc,
+                                            date: "21/08/2025", // Optional
+                                            index,
+                                            blogs, // 👈 send the entire blogs list
+                                        }}
+                                        className="link-success link-offset-2 link-underline-opacity-0 link-underline-opacity-0-hover fw-semibold"
+                                    >
+                                        CONTINUE READING
+                                    </NavLink>
 
                                 </div>
                             </div>

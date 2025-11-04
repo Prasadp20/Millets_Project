@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="row text-start">
           {/* ===== About Section ===== */}
           <div className="col-md-4 mb-4">
-            <h5 className="fw-bold mb-3 text-success">Millets For Health</h5>
+            <h5 className="fw-bold mb-3 text-success">Millets_Mate</h5>
             <p className="small">
               Promoting a healthier lifestyle with unpolished, natural millets.
               Pure, nutritious, and sustainably sourced from local farmers.

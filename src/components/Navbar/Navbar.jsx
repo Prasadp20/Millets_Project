@@ -16,8 +16,8 @@ export default function Navbar() {
                     {/* Brand Logo */}
                     <NavLink className="navbar-brand" to="/">
                         <img
-                            src=""
-                            alt="Millets for Health"
+                            src="src/assets/millet_mate.jpeg"
+                            alt="Millet_Mate"
                             height="80"
                         />
                     </NavLink>

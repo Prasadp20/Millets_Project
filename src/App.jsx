@@ -13,6 +13,7 @@ import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 import FreshMilletFood from "./pages/FreshMilletFood/FreshMilletFood";
 import WhatsAppCatalog from "./pages/WhatsAppCatalog/WhatsAppCatalog";
 import BlogDetail from "./pages/BlogDetail/BlogDetail";
+import MilletRecipe from "./pages/Home/MilletRecipe";
 
 // Example of lazy loading (optional)
 const LazyAbout = lazy(() => import("./pages/AboutUs/About"));
@@ -56,7 +57,8 @@ export default function App() {
             <Route path="/forgotpassword" element={<ForgotPassword/>} />
             <Route path="/freshmilletfood" element={<FreshMilletFood/>} />
             <Route path="/whatsappcatalog" element={<WhatsAppCatalog/>} />
-            <Route path="/blogDetail" element={<BlogDetail/>} />
+            <Route path="/blogDetail/:id" element={<BlogDetail />} />
+            <Route path="/category/:categoryName" element={<MilletRecipe />} />
           </Routes>
         </Suspense>
       </div>
