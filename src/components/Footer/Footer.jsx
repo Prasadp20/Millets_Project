@@ -20,29 +20,19 @@ export default function Footer() {
             <h6 className="fw-bold mb-3 text-success">Quick Links</h6>
             <ul className="list-unstyled">
               <li>
-                <NavLink to="/" className="text-light text-decoration-none small">
-                  Home
-                </NavLink>
+                <NavLink to="/" className="text-light text-decoration-none small">Home</NavLink>
               </li>
               <li>
-                <NavLink to="/about" className="text-light text-decoration-none small">
-                  About Us
-                </NavLink>
+                <NavLink to="/about" className="text-light text-decoration-none small">About Us</NavLink>
               </li>
               <li>
-                <NavLink to="/shop" className="text-light text-decoration-none small">
-                  Products
-                </NavLink>
+                <NavLink to="/shop" className="text-light text-decoration-none small">Products</NavLink>
               </li>
               <li>
-                <NavLink to="/blogs" className="text-light text-decoration-none small">
-                  Blogs
-                </NavLink>
+                <NavLink to="/blogs" className="text-light text-decoration-none small">Blogs</NavLink>
               </li>
               <li>
-                <NavLink to="/contactus" className="text-light text-decoration-none small">
-                  Contact Us
-                </NavLink>
+                <NavLink to="/contactus" className="text-light text-decoration-none small">Contact Us</NavLink>
               </li>
             </ul>
           </div>
@@ -91,7 +81,7 @@ export default function Footer() {
         {/* ===== Copyright Bar ===== */}
         <div className="text-center border-top border-secondary pt-3 mt-4">
           <p className="small mb-0">
-            © {new Date().getFullYear()} <span className="text-success fw-bold">Millets For Health</span>. All rights reserved.
+            © {new Date().getFullYear()} <span className="text-success fw-bold">Millet Mate</span>. All rights reserved.
           </p>
         </div>
       </div>

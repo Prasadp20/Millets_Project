@@ -14,6 +14,9 @@ import FreshMilletFood from "./pages/FreshMilletFood/FreshMilletFood";
 import WhatsAppCatalog from "./pages/WhatsAppCatalog/WhatsAppCatalog";
 import BlogDetail from "./pages/BlogDetail/BlogDetail";
 import MilletRecipe from "./pages/Home/MilletRecipe";
+import Cart from "./pages/Cart/Cart";
+import Wishlist from "./pages/Wishlist/Wishlist";
+import BottomSheetCart from "./pages/Cart/BottomSheetCart";
 
 // Example of lazy loading (optional)
 const LazyAbout = lazy(() => import("./pages/AboutUs/About"));
@@ -59,6 +62,11 @@ export default function App() {
             <Route path="/whatsappcatalog" element={<WhatsAppCatalog/>} />
             <Route path="/blogDetail/:id" element={<BlogDetail />} />
             <Route path="/category/:categoryName" element={<MilletRecipe />} />
+            <Route path="/cart" element={<Cart/>} />
+            {/* <Route path="/cart/:id" element={<Cart />} /> */}
+            <Route path="/wishlist" element={<Wishlist/>} />
+            <Route path="/bottomsheetcart" element={<BottomSheetCart/>} />
+
           </Routes>
         </Suspense>
       </div>

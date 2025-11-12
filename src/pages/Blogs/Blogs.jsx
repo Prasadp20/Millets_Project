@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import userLogo from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/user.png";
 
 export default function Blogs() {
     const [filter, setFilter] = useState("All");
@@ -134,7 +135,7 @@ export default function Blogs() {
                                     <p className="text-body-tertiary mb-1">
                                         Posted by{" "}
                                         <img
-                                            src="src/assets/user.png"
+                                            src={userLogo}
                                             alt="User Icon"
                                             style={{
                                                 width: "17px",

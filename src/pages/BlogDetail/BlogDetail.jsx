@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import userLogo from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/user.png";
 
 export default function BlogDetail() {
     const location = useLocation();
@@ -60,7 +61,7 @@ export default function BlogDetail() {
                 <p className="text-center text-muted mb-4">
                     Posted by{" "}
                     <img
-                        src="src/assets/user.png"
+                        src={userLogo}
                         alt="User Icon"
                         style={{
                             width: "17px",
@@ -95,7 +96,7 @@ export default function BlogDetail() {
                     <p className="text-muted lh-lg" style={{ fontSize: "1rem", lineHeight: "1.7" }}>
                         {desc}
                     </p>
-                )}
+                )} 
 
                 {/* Next / Previous Navigation */}
                 {blogs && blogs.length > 1 && (

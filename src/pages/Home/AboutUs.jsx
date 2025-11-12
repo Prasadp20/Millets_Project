@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import whatsappLogo from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/whatsapp.png";
 
 export default function AboutUsSection() {
     return (
@@ -140,15 +141,15 @@ export default function AboutUsSection() {
             </div>
 
             {/* --- Floating WhatsApp Icon --- */}
-            <a
-                href="https://wa.me/1234567890"
+            <NavLink
+                to="https://wa.me/1234567890"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="position-fixed bottom-0 end-0 m-4 bg-success text-white rounded-circle shadow-lg d-flex justify-content-center align-items-center"
-                style={{ width: "55px", height: "55px", zIndex: 1000 }}
+                style={{ width: "60px", height: "60px", zIndex: 1000 }}
             >
-                <i className="bi bi-whatsapp fs-3"></i>
-            </a>
+                <img src={whatsappLogo} alt="Millet_Mate" height="60" />
+            </NavLink>
         </section>
     );
 }
