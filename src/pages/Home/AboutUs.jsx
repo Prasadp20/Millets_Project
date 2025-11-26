@@ -1,6 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import whatsappLogo from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/whatsapp.png";
+import farmFresh from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/farm.png";
+import localDelivery from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/delivery-truck.png";
+import pureQuality from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/service.png";
+import healthyFocus from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/lotus-flower.png";
 
 export default function AboutUsSection() {
     return (
@@ -37,7 +41,7 @@ export default function AboutUsSection() {
                                             className="rounded-circle bg-light text-success d-flex justify-content-center align-items-center me-3"
                                             style={{ width: "45px", height: "45px" }}
                                         >
-                                            <i className="bi bi-leaf fs-5"></i>
+                                            <img src={farmFresh} alt="Farm Fresh Logo" style={{ width: "50px" }} />
                                         </div>
                                         <div>
                                             <h6 className="fw-bold mb-1">Farm Fresh</h6>
@@ -56,7 +60,7 @@ export default function AboutUsSection() {
                                             className="rounded-circle bg-light text-success d-flex justify-content-center align-items-center me-3"
                                             style={{ width: "45px", height: "45px" }}
                                         >
-                                            <i className="bi bi-check-circle fs-5"></i>
+                                            <img src={pureQuality} alt="Farm Fresh Logo" style={{ width: "50px" }} />
                                         </div>
                                         <div>
                                             <h6 className="fw-bold mb-1">Pure Quality</h6>
@@ -75,7 +79,7 @@ export default function AboutUsSection() {
                                             className="rounded-circle bg-light text-success d-flex justify-content-center align-items-center me-3"
                                             style={{ width: "45px", height: "45px" }}
                                         >
-                                            <i className="bi bi-truck fs-5"></i>
+                                            <img src={localDelivery} alt="Farm Fresh Logo" style={{ width: "50px" }} />
                                         </div>
                                         <div>
                                             <h6 className="fw-bold mb-1">Local Delivery</h6>
@@ -94,7 +98,7 @@ export default function AboutUsSection() {
                                             className="rounded-circle bg-light text-success d-flex justify-content-center align-items-center me-3"
                                             style={{ width: "45px", height: "45px" }}
                                         >
-                                            <i className="bi bi-heart-pulse fs-5"></i>
+                                            <img src={healthyFocus} alt="Farm Fresh Logo" style={{ width: "50px" }} />
                                         </div>
                                         <div>
                                             <h6 className="fw-bold mb-1">Health Focused</h6>

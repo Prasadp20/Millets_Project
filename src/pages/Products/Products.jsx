@@ -269,10 +269,10 @@ export default function Products() {
 
                         {/* === Pagination === */}
                         <nav className="mt-5 d-flex justify-content-center">
-                            <ul className="pagination">
+                            <ul className="pagination pagination-green">
                                 <li className={`page-item ${currentPage === 1 ? "disabled" : ""}`}>
                                     <button
-                                        className="page-link"
+                                        className="page-link text-success"
                                         onClick={() => handlePageChange(currentPage - 1)}
                                     >
                                         Previous
@@ -295,7 +295,7 @@ export default function Products() {
 
                                 <li className={`page-item ${currentPage === totalPages ? "disabled" : ""}`}>
                                     <button
-                                        className="page-link"
+                                        className="page-link text-success"
                                         onClick={() => handlePageChange(currentPage + 1)}
                                     >
                                         Next

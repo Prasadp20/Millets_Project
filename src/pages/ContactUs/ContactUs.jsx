@@ -1,6 +1,8 @@
 import React from "react";
-import Navbar from "../../components/Navbar/Navbar";
-import Footer from "../../components/Footer/Footer";
+import phoneLogo from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/phone.png";
+import mailLogo from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/mail.png";
+import socialLogo from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/group-users.png";
+import LocationLogo from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/maps-and-flags.png";
 
 export default function ContactUs() {
     return (
@@ -45,14 +47,14 @@ export default function ContactUs() {
                                 height: "50px",
                             }}
                         >
-                            <i className="bi bi-telephone-fill text-white" style={{ fontSize: "1.3rem" }}></i>
+                            <img src={phoneLogo} alt="Call Us Logo" style={{ width: "30px" }} />
                         </div>
                         <h5 className="fw-bold mt-4">Call us</h5>
                         <p className="mt-2 mb-0">+91 - 9212791110</p>
                         <p className="mb-0">+ 0120 4574825</p>
                     </div>
 
-                    {/* Mail Us */}
+                    {/* Mail Us */}run dev
                     <div className="col d-flex flex-column align-items-center text-center bg-white rounded-4 p-4 m-2 shadow p-3 position-relative">
                         <div
                             className="rounded-circle d-flex justify-content-center align-items-center position-absolute"
@@ -63,7 +65,7 @@ export default function ContactUs() {
                                 height: "50px",
                             }}
                         >
-                            <i className="bi bi-envelope-fill text-white" style={{ fontSize: "1.3rem" }}></i>
+                            <img src={mailLogo} alt="Mail Us Logo" style={{ width: "30px" }} />
                         </div>
                         <h5 className="fw-bold mt-4">Mail Us</h5>
                         <p className="mt-2 mb-0">hello@milletsforhealth.com</p>
@@ -80,7 +82,7 @@ export default function ContactUs() {
                                 height: "50px",
                             }}
                         >
-                            <i className="bi bi-link-45deg text-white" style={{ fontSize: "1.3rem" }}></i>
+                            <img src={socialLogo} alt="Social Logo" style={{ width: "30px" }} />
                         </div>
                         <h5 className="fw-bold mt-4">Social Profile</h5>
                         <div className="mt-2">
@@ -110,13 +112,14 @@ export default function ContactUs() {
                                 height: "50px",
                             }}
                         >
-                            <i className="bi bi-geo-alt-fill text-white" style={{ fontSize: "1.3rem" }}></i>
+                            <img src={LocationLogo} alt="Location Logo" style={{ width: "30px" }} />
                         </div>
                         <h5 className="fw-bold mt-4">Location</h5>
                         <p className="mt-2 mb-0">
                             Millets for Health, C 22/16, SF, Block C, Sector 57,<br />
                             Noida, Uttar Pradesh 201301
-                        </p></div>
+                        </p>
+                    </div>
                 </div>
             </div>
 
