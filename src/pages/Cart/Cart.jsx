@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
-import productImage from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/Gemini_Generated_Image_d8xv2dd8xv2dd8xv.png"; // <-- use your image path
+// import productImage from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/Gemini_Generated_Image_d8xv2dd8xv2dd8xv.png"; // <-- use your image path
+import productImage from "D:/ReactJs/Millets_Project/src/assets/Gemini_Generated_Image_d8xv2dd8xv2dd8xv.png";
 
 export default function Cart() {
     const navigate = useNavigate();

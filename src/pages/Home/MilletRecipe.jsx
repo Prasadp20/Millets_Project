@@ -6,7 +6,7 @@
 //     const navigate = useNavigate();
 
 //     // Destructure safely
-//     const { name, image, recipe, categories, index = 0, title } = location.state || {};
+//     const { name, image, recipe, categories, index = 0, title, videoUrl } = location.state || {};
 
 //     // Handle navigation for Next / Previous
 //     const handleNavigate = (newIndex) => {
@@ -51,64 +51,81 @@
 //                 {/* Blog Title */}
 //                 <h2 className="fw-bold text-center mb-4">{name || "Recipe Title"}</h2>
 
-//                 {/* Blog Image */}
-//                 {image && (
-//                     <div className="text-center mb-5">
-//                         <img
-//                             src={image}
-//                             alt={name}
-//                             className="img-fluid rounded-4 shadow-sm"
-//                             style={{
-//                                 maxWidth: "50%",
-//                                 borderRadius: "12px",
-//                                 objectFit: "cover",
-//                             }}
-//                         />
+//                 {/* ========================= Image + Ingredients Side-by-Side ========================== */}
+//                 {image && recipe?.ingredients && (
+//                     <div className="row align-items-start mb-5 g-4">
+//                         {/* Left: Image */}
+//                         <div className="col-md-6 text-center">
+//                             <img
+//                                 src={image}
+//                                 alt={name}
+//                                 className="img-fluid rounded-4 shadow-sm"
+//                                 style={{
+//                                     width: "100%",
+//                                     maxHeight: "350px",
+//                                     objectFit: "cover",
+//                                 }}
+//                             />
+//                         </div>
+
+//                         {/* Right: Ingredients */}
+//                         <div className="col-md-6">
+//                             <h4 className="fw-semibold mb-3 text-success">
+//                                 🥣 Ingredients You Need:
+//                             </h4>
+//                             <ul className="list-unstyled ms-1">
+//                                 {recipe.ingredients.map((item, i) => (
+//                                     <li key={i} className="mb-2 d-flex align-items-start">
+//                                         <i className="bi bi-check-circle text-success me-2 mt-1"></i>
+//                                         <span>{item}</span>
+//                                     </li>
+//                                 ))}
+//                             </ul>
+//                         </div>
 //                     </div>
 //                 )}
 
-//                 {/* ========================= Millet Recipe Section ========================== */}
-//                 {recipe && (
+//                 {/* ========================= Millet Recipe Steps Section ========================== */}
+//                 {recipe && recipe.steps && (
 //                     <div className="mt-2">
-//                         {/* Ingredients Section */}
-//                         {recipe.ingredients && (
-//                             <div className="mb-5">
-//                                 <h4 className="fw-semibold mb-3 text-success">
-//                                     🥣 Ingredients You Need:
-//                                 </h4>
-//                                 <ul className="list-unstyled ms-3">
-//                                     {recipe.ingredients.map((item, i) => (
-//                                         <li key={i} className="mb-2">
-//                                             <i className="bi bi-check-circle text-success me-2"></i>
-//                                             {item}
+//                         <h4 className="fw-semibold mb-3 text-success">
+//                             👨‍🍳 Step-by-Step Recipe:
+//                         </h4>
+
+//                         {recipe.steps.map((step, idx) => (
+//                             <div key={idx} className="mb-4">
+//                                 <h5 className="fw-bold text-dark mb-2">{step.stepTitle}</h5>
+//                                 <ol className="ms-4">
+//                                     {step.instructions.map((line, j) => (
+//                                         <li key={j} className="mb-1 text-muted">
+//                                             {line}
 //                                         </li>
 //                                     ))}
-//                                 </ul>
+//                                 </ol>
 //                             </div>
-//                         )}
+//                         ))}
+//                     </div>
+//                 )}
 
-//                         {/* Steps Section */}
-//                         {recipe.steps && (
-//                             <div>
-//                                 <h4 className="fw-semibold mb-3 text-success">
-//                                     👨‍🍳 Step-by-Step Recipe:
-//                                 </h4>
-//                                 {recipe.steps.map((step, idx) => (
-//                                     <div key={idx} className="mb-4">
-//                                         <h5 className="fw-bold text-dark mb-2">
-//                                             {step.stepTitle}
-//                                         </h5>
-//                                         <ol className="ms-4">
-//                                             {step.instructions.map((line, j) => (
-//                                                 <li key={j} className="mb-1 text-muted">
-//                                                     {line}
-//                                                 </li>
-//                                             ))}
-//                                         </ol>
-//                                     </div>
-//                                 ))}
-//                             </div>
-//                         )}
+//                 {/* ================= Video Section ==================== */}
+//                 {recipe.videoUrl && (
+//                     <div className="mt-5 text-center">
+//                         <h4 className="fw-semibold mb-3 text-success">
+//                             🎥 Watch the Recipe Video
+//                         </h4>
+
+//                         <div className="ratio ratio-16x9 rounded-4 shadow">
+//                             <iframe
+//                                 src={recipe.videoUrl}
+//                                 title={name}
+//                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+//                                 allowFullScreen
+//                                 style={{
+//                                     border: "none",
+//                                     borderRadius: "20px",
+//                                 }}
+//                             ></iframe>
+//                         </div>
 //                     </div>
 //                 )}
 
@@ -177,8 +194,6 @@
 // }
 
 
-
-
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
@@ -187,7 +202,7 @@ export default function MilletRecipe() {
     const navigate = useNavigate();
 
     // Destructure safely
-    const { name, image, recipe, categories, index = 0, title } = location.state || {};
+    const { name, image, recipe, categories, index = 0, title, videoUrl } = location.state || {};
 
     // Handle navigation for Next / Previous
     const handleNavigate = (newIndex) => {
@@ -287,6 +302,40 @@ export default function MilletRecipe() {
                         ))}
                     </div>
                 )}
+
+                {/* ================= Video Section ==================== */}
+                {videoUrl && (
+                    <div className="mt-5 text-center">
+                        <h4 className="fw-semibold mb-3 text-success">
+                            🎥 Watch the Recipe Video
+                        </h4>
+
+                        <div className="ratio ratio-16x9 rounded-4 shadow">
+                            {/* <iframe
+                                src={videoUrl}
+                                title={name}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                                style={{
+                                    border: "none",
+                                    borderRadius: "20px",
+                                }}
+                            ></iframe> */}
+
+                            <iframe
+                                width="560" height="315"
+                                src={videoUrl}
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allowfullscreen>
+                            </iframe>
+                            
+                        </div>
+                    </div>
+                )}
+                {/* ====================================================== */}
 
                 {/* ========================= Navigation Buttons ========================== */}
                 {categories && categories.length > 1 && (

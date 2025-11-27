@@ -1,6 +1,10 @@
 import React from "react";
-import missionLogo from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/mission.png";
-import visionLogo from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/sight.png";
+// import missionLogo from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/mission.png";
+// import visionLogo from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/sight.png";
+
+import missionLogo from "D:/ReactJs/Millets_Project/src/assets/mission.png";
+import visionLogo from "D:/ReactJs/Millets_Project/src/assets/sight.png";
+
 
 export default function About() {
 

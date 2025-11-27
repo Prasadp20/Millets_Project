@@ -1,27 +1,32 @@
-// import { StrictMode } from 'react'
-// import { createRoot } from 'react-dom/client'
-// // import './index.css'
-// import App from './App.jsx'
+// import React from "react";
+// import { createRoot } from "react-dom/client";
+// import { BrowserRouter } from "react-router-dom";
+// import App from "./App";
 
-// createRoot(document.getElementById('root')).render(
-//   <StrictMode>
-//     <App />
-//   </StrictMode>,
-// )
+// createRoot(document.getElementById("root")).render(
+//   <React.StrictMode>
+//     <BrowserRouter basename="Millets_Project">
+//       <App />
+//     </BrowserRouter>
+//   </React.StrictMode>
+// );
 
 
-// src/main.jsx
 import React from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
-// import "bootstrap/dist/css/bootstrap.min.css";
-// import "./index.css";
+import { AppProvider } from "./context/AppContext";  // ✔ Import provider
+import { AlertProvider } from "./context/AlertContext";
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter basename="Millets_Project">
-      <App />
+      <AppProvider>       {/* ✔ Wrap here */}
+        <AlertProvider>
+          <App />
+        </AlertProvider>
+      </AppProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

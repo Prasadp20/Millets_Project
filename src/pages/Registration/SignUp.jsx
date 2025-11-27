@@ -1,15 +1,67 @@
-import React from "react";
+import { useContext, useState } from "react";
+import { AlertContext } from "../../context/AlertContext";
 import { useNavigate } from "react-router-dom";
 
-export default function Signup() {
+export default function Signup(props) {
     const navigate = useNavigate();
+    const { showAlert } = useContext(AlertContext);
 
-    const handleLoginClick = () => {
-        navigate("/login");
+    const [name, setName] = useState("");
+    const [emailId, setEmailId] = useState("");
+    const [password, setPassword] = useState("");
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        try {
+            const response = await fetch("https://localhost:7000/api/Users/CreateUsers", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    name,
+                    emailId,
+                    password,
+                    mobileNo: "string",
+                    subject: "string",
+                    message: "string",
+                    userId: emailId,
+                    createdAt: Date.now,
+                    createdBy: 0,
+                    isDeleted: false
+                })
+            });
+
+            if (!response.ok) {
+                showAlert("Registration failed!", "danger");
+                return;
+            }
+
+            const data = await response.json();
+
+            if (data) {
+                showAlert("Registration successful!", "success");
+                navigate("/login");
+            } else {
+                showAlert("User already exists!", "danger");
+            }
+
+        } catch (error) {
+            showAlert("Something went wrong!", "danger");
+        }
     };
 
     return (
         <>
+            {/* Bootstrap Alert */}
+            {alert.msg && (
+                <div
+                    className={`alert alert-${alert.type} alert-dismissible fade show text-center m-0`}
+                    role="alert"
+                >
+                    {alert.msg}
+                </div>
+            )}
+
             {/* Top Banner Section */}
             <div
                 className="container-fluid d-flex justify-content-center align-items-center text-center"
@@ -34,8 +86,10 @@ export default function Signup() {
                     <p>Home / My Account</p>
                 </div>
             </div>
+
             <div className="bg-light py-5">
                 <div className="container bg-white shadow-sm p-5 rounded-4">
+
                     {/* Breadcrumb */}
                     <div className="mb-4">
                         <nav aria-label="breadcrumb">
@@ -54,10 +108,12 @@ export default function Signup() {
 
                     {/* Register + Login Section */}
                     <div className="row mt-4">
+
                         {/* Register Column */}
                         <div className="col-md-6 border-end">
                             <h3 className="fw-bold mb-4">Register</h3>
-                            <form>
+
+                            <form onSubmit={handleSubmit}>
                                 <div className="mb-3">
                                     <label htmlFor="username" className="form-label fw-semibold">
                                         Username <span className="text-danger">*</span>
@@ -65,9 +121,10 @@ export default function Signup() {
                                     <input
                                         type="text"
                                         className="form-control rounded-pill"
-                                        id="username"
                                         placeholder="Enter username"
                                         required
+                                        value={name}
+                                        onChange={(e) => setName(e.target.value)}
                                     />
                                 </div>
 
@@ -78,9 +135,10 @@ export default function Signup() {
                                     <input
                                         type="email"
                                         className="form-control rounded-pill"
-                                        id="email"
                                         placeholder="Enter your email"
                                         required
+                                        value={emailId}
+                                        onChange={(e) => setEmailId(e.target.value)}
                                     />
                                 </div>
 
@@ -91,46 +149,40 @@ export default function Signup() {
                                     <input
                                         type="password"
                                         className="form-control rounded-pill"
-                                        id="password"
                                         placeholder="Enter your password"
                                         required
+                                        minLength={5}
+                                        value={password}
+                                        onChange={(e) => setPassword(e.target.value)}
                                     />
-                                    <span
-                                        className="position-absolute top-50 end-0 translate-middle-y me-3 text-muted"
-                                        style={{ cursor: "pointer" }}
-                                    >
-                                        <i className="bi bi-eye"></i>
-                                    </span>
                                 </div>
 
-                                <p className="text-muted small mt-3">
-                                    Your personal data will be used to support your experience throughout this website,
-                                    to manage access to your account, and for other purposes described in our{" "}
-                                    <a href="#" className="text-decoration-none text-success fw-semibold">
-                                        privacy policy
-                                    </a>.
-                                </p>
-
-                                <button type="submit" className="btn btn-success w-100 rounded-pill fw-semibold">REGISTER</button>
+                                <button
+                                    type="submit"
+                                    className="btn btn-success w-100 rounded-pill fw-semibold"
+                                >
+                                    REGISTER
+                                </button>
                             </form>
                         </div>
 
                         {/* Login Column */}
                         <div className="col-md-6 text-center d-flex flex-column align-items-center">
                             <h3 className="fw-bold mb-3">Login</h3>
-                            <p className="text-muted px-3 text-center">
+                            <p className="text-muted px-3">
                                 Registering for this site allows you to access your order status and history.
                                 Just fill in the fields below, and we’ll get a new account set up for you in no time.
-                                We will only ask you for information necessary to make the purchase process faster and easier.
                             </p>
+
                             <button
-                                onClick={handleLoginClick}
+                                onClick={() => navigate("/login")}
                                 className="btn btn-success rounded-pill fw-semibold mt-2 px-4"
                                 style={{ width: "150px" }}
                             >
                                 LOGIN
                             </button>
                         </div>
+
                     </div>
                 </div>
             </div>

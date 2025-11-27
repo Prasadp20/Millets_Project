@@ -17,21 +17,25 @@ import MilletRecipe from "./pages/Home/MilletRecipe";
 import Cart from "./pages/Cart/Cart";
 import Wishlist from "./pages/Wishlist/Wishlist";
 import BottomSheetCart from "./pages/Cart/BottomSheetCart";
+import Alert from "./components/Alert/Alert";
 
 // Example of lazy loading (optional)
 const LazyAbout = lazy(() => import("./pages/AboutUs/About"));
 
 export default function App() {
+
   return (
     <>
       <Navbar />
+      <Alert />
+      {/* All your routes here */}
       <div>
         <Suspense fallback={<div>Loading...</div>}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/shop" element={<Shop />} />
-            <Route path="/contactus" element={<ContactUs/>} />
+            <Route path="/contactus" element={<ContactUs />} />
 
             {/* dynamic route */}
             {/* <Route path="/blog/:id" element={<Blogs />} /> */}
@@ -56,16 +60,17 @@ export default function App() {
             {/* <Route path="*" element={<NotFound />} /> */}
 
             <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup/>} />
-            <Route path="/forgotpassword" element={<ForgotPassword/>} />
-            <Route path="/freshmilletfood" element={<FreshMilletFood/>} />
-            <Route path="/whatsappcatalog" element={<WhatsAppCatalog/>} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/forgotpassword" element={<ForgotPassword />} />
+            <Route path="/freshmilletfood" element={<FreshMilletFood />} />
+            <Route path="/whatsappcatalog" element={<WhatsAppCatalog />} />
             <Route path="/blogDetail/:id" element={<BlogDetail />} />
             <Route path="/category/:categoryName" element={<MilletRecipe />} />
-            <Route path="/cart" element={<Cart/>} />
+            <Route path="/cart" element={<Cart />} />
             {/* <Route path="/cart/:id" element={<Cart />} /> */}
-            <Route path="/wishlist" element={<Wishlist/>} />
-            <Route path="/bottomsheetcart" element={<BottomSheetCart/>} />
+            <Route path="/wishlist" element={<Wishlist />} />
+            <Route path="/bottomsheetcart" element={<BottomSheetCart />} />
+
 
           </Routes>
         </Suspense>

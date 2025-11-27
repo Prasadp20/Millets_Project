@@ -1,8 +1,13 @@
 import React from "react";
-import phoneLogo from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/phone.png";
-import mailLogo from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/mail.png";
-import socialLogo from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/group-users.png";
-import LocationLogo from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/maps-and-flags.png";
+// import phoneLogo from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/phone.png";
+// import mailLogo from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/mail.png";
+// import socialLogo from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/group-users.png";
+// import LocationLogo from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/maps-and-flags.png";
+
+import phoneLogo from "D:/ReactJs/Millets_Project/src/assets/phone.png";
+import mailLogo from "D:/ReactJs/Millets_Project/src/assets/mail.png";
+import socialLogo from "D:/ReactJs/Millets_Project/src/assets/group-users.png";
+import LocationLogo from "D:/ReactJs/Millets_Project/src/assets/maps-and-flags.png";
 
 export default function ContactUs() {
     return (

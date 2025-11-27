@@ -1,10 +1,15 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import viewLogo from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/view.png";
-import hideLogo from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/hide.png";
+import { useContext, useState } from "react";
+import { AlertContext } from "../../context/AlertContext";
+import { useNavigate, NavLink } from "react-router-dom";
+// import viewLogo from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/view.png";
+// import hideLogo from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/hide.png";
 
-export default function LoginBottomSheet() {
+import viewLogo from "D:/ReactJs/Millets_Project/src/assets/view.png";
+import hideLogo from "D:/ReactJs/Millets_Project/src/assets/hide.png";
+
+export default function LoginBottomSheet(props) {
     const navigate = useNavigate();
+    const { showAlert } = useContext(AlertContext);
     const [showPassword, setShowPassword] = useState(false);
 
     // Function to close Bootstrap offcanvas programmatically
@@ -30,6 +35,48 @@ export default function LoginBottomSheet() {
         setShowPassword((prev) => !prev);
     };
 
+
+    const [emailId, setEmailId] = useState("");
+    const [password, setPassword] = useState("");
+
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        try {
+            const response = await fetch("https://localhost:7000/api/Users/login", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    UserId: emailId,
+                    Password: password
+                }),
+            });
+
+            const data = await response.json();
+
+            if (data.responseData) {
+                // Save user details
+                localStorage.setItem("userData", JSON.stringify(data.responseData));
+
+                // Success alert
+                showAlert("Login successful!", "success");
+
+                closeOffcanvas();
+                // Redirect to home
+                navigate("/");
+            } else {
+                showAlert("Invalid login details", "danger");
+                closeOffcanvas();
+            }
+        } catch (error) {
+            showAlert("Something went wrong", "danger");
+            closeOffcanvas();
+        }
+    };
+
+
+
     return (
         <div
             className="offcanvas offcanvas-end"
@@ -51,7 +98,7 @@ export default function LoginBottomSheet() {
             </div>
 
             <div className="offcanvas-body py-4">
-                <form className="d-flex flex-column gap-4">
+                <form className="d-flex flex-column gap-4" onSubmit={handleSubmit}>
                     {/* Username/Email */}
                     <div>
                         <label className="form-label fw-semibold">
@@ -62,6 +109,11 @@ export default function LoginBottomSheet() {
                             className="form-control rounded-pill py-2"
                             placeholder="Enter username or email"
                             required
+                            id="email"
+                            name="email"
+                            value={emailId}
+                            onChange={(e) => setEmailId(e.target.value)}
+                            aria-describedby="emailHelp"
                         />
                     </div>
 
@@ -76,6 +128,9 @@ export default function LoginBottomSheet() {
                             className="form-control rounded-pill py-2 pe-5"
                             placeholder="Enter your password"
                             required
+                            name="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
                         />
                         <button
                             type="button"

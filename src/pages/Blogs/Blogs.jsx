@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import userLogo from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/user.png";
+// import userLogo from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/user.png";
+import userLogo from "D:/ReactJs/Millets_Project/src/assets/user.png";
 
 export default function Blogs() {
     const [filter, setFilter] = useState("All");

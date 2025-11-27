@@ -7,6 +7,7 @@ export default function MilletCategories() {
       name: "Sorghum Samosa",
       color: "#fff5e6",
       image: "https://gramisuperfoods.com/wp-content/webp-express/webp-images/uploads/2023/02/samosa.jpg.webp",
+      videoUrl: "https://www.youtube.com/embed/Ukry5NEQ_dg?si=-TNLmu0tah6jAVQi",
       recipe: {
         title: "Sorghum Samosa",
         ingredients: [
@@ -69,6 +70,7 @@ export default function MilletCategories() {
       name: "Sorghum Dosa",
       color: "#e6fff2",
       image: "https://b2958125.smushcdn.com/2958125/wp-content/uploads/instant-millet-dosa-1-5.jpg?lossy=1&strip=1&webp=1",
+      videoUrl: "https://www.youtube.com/embed/SUH-7aqnNTk?si=iKEmnNdO3GxcuHuF",
       recipe: {
         title: "Sorghum Dosa",
         ingredients: [
@@ -111,6 +113,7 @@ export default function MilletCategories() {
       name: "Pearl Millet Upma",
       color: "rgba(255, 245, 230, 1)",
       image: "https://milletz.com/wp-content/uploads/2023/03/upma.jpg",
+      videoUrl: "https://www.youtube.com/embed/ewf1XgBTa_U?si=CmEUQ1C_gLtGq2GO",
       recipe: {
         title: "Pearl Millet Upma",
         ingredients: [
@@ -168,6 +171,7 @@ export default function MilletCategories() {
       name: "Millets Daliya",
       color: "#e6fff2",
       image: "https://milletsforhealth.com/wp-content/uploads/2025/07/2.png",
+      videoUrl: "https://www.youtube.com/embed/D94ifd_Hwbo?si=9ABrgGlg53GNiEEG",
       recipe: {
         title: "Millet Daliya",
         ingredients: [
@@ -228,6 +232,7 @@ export default function MilletCategories() {
       name: "Pearl Millet Khichdi",
       color: "#f0f7f0",
       image: "https://www.zaykakatadka.com/wp-content/uploads/2019/01/IMG-20190118-WA0000.jpg",
+      videoUrl: "https://www.youtube.com/embed/06ORida51fA?si=vrD1SwU3csWC_09h",
       recipe: {
         title: "Pearl Millet Khichdi",
         ingredients: [
@@ -285,6 +290,7 @@ export default function MilletCategories() {
       name: "Finger Millet Laddu",
       color: "#e6fff2",
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIAnXu9sN2q9Ag_7M6FuejVlw-tnHUmqtkEg&s",
+      videoUrl: "https://www.youtube.com/embed/TqftpXbHhdo?si=KCK_S9qDA_Ig7HLI",
       recipe: {
         title: "Finger Millet Laddu",
         ingredients: [
@@ -342,6 +348,7 @@ export default function MilletCategories() {
       name: "Millet Pasta",
       color: "#fff5e6",
       image: "https://milletsforhealth.com/wp-content/uploads/2025/08/Group-9.png",
+      videoUrl: "https://www.youtube.com/embed/SbKCUc0D4pA?si=OS5eJg7NVtodt22Q",
       recipe: {
         title: "Millet Pasta Recipe",
         ingredients: [
@@ -391,6 +398,7 @@ export default function MilletCategories() {
       name: "Millet Noodles",
       color: "#e6fff2",
       image: "https://naturallyyours.in/cdn/shop/files/13_5eb1e556-43c2-46a5-983c-bb9ed33194f2.png?v=1753429200",
+      videoUrl:"https://www.youtube.com/embed/BKErK4oWW7Y?si=jA-Px3qv-hDas2BF",
       recipe: {
         title: "Millet Noodles",
         ingredients: [
@@ -449,6 +457,7 @@ export default function MilletCategories() {
       name: "Finger Millet Murukku",
       color: "#f0f7f0",
       image: "https://www.sharmispassions.com/wp-content/uploads/2020/12/22553891811_81c4423d04_o.jpg",
+      videoUrl: "https://www.youtube.com/embed/1cjh-iGQqfw?si=qpGdYIt7fbIWv2E5",
       recipe: {
         title: "Finger Millet Murukku",
         ingredients: [
@@ -577,6 +586,7 @@ export default function MilletCategories() {
                           state={{
                             name: item.name,
                             image: item.image,
+                            videoUrl: item.videoUrl,
                             recipe: item.recipe,
                             categories
                           }}

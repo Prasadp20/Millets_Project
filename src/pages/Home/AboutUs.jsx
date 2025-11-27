@@ -1,10 +1,16 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import whatsappLogo from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/whatsapp.png";
-import farmFresh from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/farm.png";
-import localDelivery from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/delivery-truck.png";
-import pureQuality from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/service.png";
-import healthyFocus from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/lotus-flower.png";
+// import whatsappLogo from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/whatsapp.png";
+// import farmFresh from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/farm.png";
+// import localDelivery from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/delivery-truck.png";
+// import pureQuality from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/service.png";
+// import healthyFocus from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/lotus-flower.png";
+
+import whatsappLogo from "D:/ReactJs/Millets_Project/src/assets/whatsapp.png";
+import farmFresh from "D:/ReactJs/Millets_Project/src/assets/farm.png";
+import localDelivery from "D:/ReactJs/Millets_Project/src/assets/delivery-truck.png";
+import pureQuality from "D:/ReactJs/Millets_Project/src/assets/service.png";
+import healthyFocus from "D:/ReactJs/Millets_Project/src/assets/lotus-flower.png";
 
 export default function AboutUsSection() {
     return (

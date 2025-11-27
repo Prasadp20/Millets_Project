@@ -1,6 +1,7 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import userLogo from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/user.png";
+// import userLogo from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/user.png";
+import userLogo from "D:/ReactJs/Millets_Project/src/assets/user.png";
 
 export default function BlogDetail() {
     const location = useLocation();

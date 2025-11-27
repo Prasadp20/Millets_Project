@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate, NavLink } from "react-router-dom";
-import cartLogo from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/shopping-bag.png";
-import wishlistLogo from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/love.png";
+// import cartLogo from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/shopping-bag.png";
+// import wishlistLogo from "/home/prasad-pathak/Documents/ReactJs/Millets_Project/src/assets/love.png";
+
+import cartLogo from "D:/ReactJs/Millets_Project/src/assets/shopping-bag.png";
+import wishlistLogo from "D:/ReactJs/Millets_Project/src/assets/love.png";
 
 export default function Products() {
 
